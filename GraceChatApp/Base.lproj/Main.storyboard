@@ -90,11 +90,51 @@
                     <view key="view" contentMode="scaleToFill" id="0j5-fx-MKw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gL3-NT-lqd">
+                                <rect key="frame" x="0.0" y="144" width="375" height="523"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" id="fsz-qq-eYW" customClass="DiscListTableViewCell" customModule="GraceChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fsz-qq-eYW" id="YoI-oB-TsO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgL-n9-X71">
+                                                    <rect key="frame" x="15" y="11" width="345" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tgL-n9-X71" secondAttribute="bottom" id="JFT-Fy-prM"/>
+                                                <constraint firstItem="tgL-n9-X71" firstAttribute="top" secondItem="YoI-oB-TsO" secondAttribute="topMargin" id="Z57-bO-akN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tgL-n9-X71" secondAttribute="trailing" id="fbc-XB-uMK"/>
+                                                <constraint firstItem="tgL-n9-X71" firstAttribute="leading" secondItem="YoI-oB-TsO" secondAttribute="leadingMargin" id="nWU-1V-PaR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="tgL-n9-X71" id="El6-JH-V2w"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gL3-NT-lqd" firstAttribute="leading" secondItem="4XO-4d-F2k" secondAttribute="leading" id="BZb-p6-5HL"/>
+                            <constraint firstItem="4XO-4d-F2k" firstAttribute="bottom" secondItem="gL3-NT-lqd" secondAttribute="bottom" id="HBR-IO-nTd"/>
+                            <constraint firstItem="4XO-4d-F2k" firstAttribute="trailing" secondItem="gL3-NT-lqd" secondAttribute="trailing" id="tII-hs-vIZ"/>
+                            <constraint firstItem="gL3-NT-lqd" firstAttribute="top" secondItem="4XO-4d-F2k" secondAttribute="top" constant="100" id="zgT-kf-D6h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4XO-4d-F2k"/>
                     </view>
                     <navigationItem key="navigationItem" id="qKu-xC-EVK"/>
                     <connections>
+                        <outlet property="tableView" destination="gL3-NT-lqd" id="tm2-kU-EG3"/>
                         <segue destination="5pY-6o-NdV" kind="show" id="Vob-zE-HNS"/>
                     </connections>
                 </viewController>
