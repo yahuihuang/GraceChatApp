@@ -136,7 +136,7 @@
                     <navigationItem key="navigationItem" id="qKu-xC-EVK"/>
                     <connections>
                         <outlet property="tableView" destination="gL3-NT-lqd" id="tm2-kU-EG3"/>
-                        <segue destination="5pY-6o-NdV" kind="show" id="Vob-zE-HNS"/>
+                        <segue destination="5pY-6o-NdV" kind="show" identifier="goDiscList" id="Vob-zE-HNS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAY-FY-MYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
