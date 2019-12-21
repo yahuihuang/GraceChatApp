@@ -7,15 +7,34 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
+    var forumArray:[String] = []
+    var dbRef:DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dbRef = Database.database().reference()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        dbRef.child("subject").observeSingleEvent(of: .value) { (snapshot) in
+            print(snapshot)
+            for snapshotItem in snapshot.children {
+                print(snapshotItem)
+                if let item = snapshotItem as? DataSnapshot {
+                    for snapshotItem2 in item.children {
+                        print(snapshotItem2)
+                        if let item2 = snapshotItem2 as? DataSnapshot {
+                            print("item2=> \(item2.key): \(item2.value as? String ?? "")")
+                        }
+                    }
+                }
+            }
+        }
     }
     
     //MARK: tableView Delegate
