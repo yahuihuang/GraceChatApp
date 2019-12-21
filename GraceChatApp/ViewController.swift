@@ -7,14 +7,41 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var nickName: UITextField!
+    @IBOutlet weak var status: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        Auth.auth().signInAnonymously { (user, error) in
+            if error == nil {
+                self.status.text = "已完成登入"
+            } else {
+                self.status.text = "登入錯誤"
+            }
+        }
     }
 
-
+    @IBAction func enterDisc(_ sender: Any) {
+        if Auth.auth().currentUser == nil {
+            return
+        }
+        
+        let myNickName = nickName.text ?? ""
+        if myNickName.count < 3 {
+            showAlert("名字需大於3個字元")
+            return
+        }
+    }
+    
 }
 
+extension UIViewController {
+    func showAlert(_ msg: String) {
+        let alert = UIAlertController(title: "注意", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "收到", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}
