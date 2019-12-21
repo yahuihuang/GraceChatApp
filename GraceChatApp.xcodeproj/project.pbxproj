@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		134FC690294ADD1FFD952E2E /* Pods_GraceChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4E7732D5724B3EB0722C1E /* Pods_GraceChatApp.framework */; };
+		65623FD523ADF20A00726FC0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65623FD423ADF20A00726FC0 /* ChatViewController.swift */; };
 		6585FEE823ADE7CC009DA8C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6585FEE723ADE7CC009DA8C7 /* AppDelegate.swift */; };
 		6585FEEA23ADE7CC009DA8C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6585FEE923ADE7CC009DA8C7 /* SceneDelegate.swift */; };
 		6585FEEC23ADE7CC009DA8C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6585FEEB23ADE7CC009DA8C7 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		44EE0F45F3859315982761C5 /* Pods-GraceChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraceChatApp.release.xcconfig"; path = "Target Support Files/Pods-GraceChatApp/Pods-GraceChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		54D0DE3FE83AF4844134AD83 /* Pods-GraceChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraceChatApp.debug.xcconfig"; path = "Target Support Files/Pods-GraceChatApp/Pods-GraceChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		65623FD423ADF20A00726FC0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		6585FEE423ADE7CC009DA8C7 /* GraceChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraceChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6585FEE723ADE7CC009DA8C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6585FEE923ADE7CC009DA8C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 				54D0DE3FE83AF4844134AD83 /* Pods-GraceChatApp.debug.xcconfig */,
 				44EE0F45F3859315982761C5 /* Pods-GraceChatApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				6585FEE923ADE7CC009DA8C7 /* SceneDelegate.swift */,
 				6585FEEB23ADE7CC009DA8C7 /* ViewController.swift */,
 				6585FEED23ADE7CC009DA8C7 /* Main.storyboard */,
+				65623FD423ADF20A00726FC0 /* ChatViewController.swift */,
 				6585FEF023ADE7CE009DA8C7 /* Assets.xcassets */,
 				6585FEF223ADE7CE009DA8C7 /* LaunchScreen.storyboard */,
 				6585FEF523ADE7CE009DA8C7 /* Info.plist */,
@@ -213,6 +215,7 @@
 			files = (
 				6585FEEC23ADE7CC009DA8C7 /* ViewController.swift in Sources */,
 				6585FEE823ADE7CC009DA8C7 /* AppDelegate.swift in Sources */,
+				65623FD523ADF20A00726FC0 /* ChatViewController.swift in Sources */,
 				6585FEEA23ADE7CC009DA8C7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

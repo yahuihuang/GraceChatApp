@@ -23,6 +23,16 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 
     @IBAction func enterDisc(_ sender: Any) {
         if Auth.auth().currentUser == nil {
@@ -34,6 +44,8 @@ class ViewController: UIViewController {
             showAlert("名字需大於3個字元")
             return
         }
+        
+        performSegue(withIdentifier: "goList", sender: self)
     }
     
 }
