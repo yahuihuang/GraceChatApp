@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134FC690294ADD1FFD952E2E /* Pods_GraceChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4E7732D5724B3EB0722C1E /* Pods_GraceChatApp.framework */; };
 		6585FEE823ADE7CC009DA8C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6585FEE723ADE7CC009DA8C7 /* AppDelegate.swift */; };
 		6585FEEA23ADE7CC009DA8C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6585FEE923ADE7CC009DA8C7 /* SceneDelegate.swift */; };
 		6585FEEC23ADE7CC009DA8C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6585FEEB23ADE7CC009DA8C7 /* ViewController.swift */; };
 		6585FEEF23ADE7CC009DA8C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6585FEED23ADE7CC009DA8C7 /* Main.storyboard */; };
 		6585FEF123ADE7CE009DA8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6585FEF023ADE7CE009DA8C7 /* Assets.xcassets */; };
 		6585FEF423ADE7CE009DA8C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6585FEF223ADE7CE009DA8C7 /* LaunchScreen.storyboard */; };
+		6585FEFC23ADE86A009DA8C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6585FEFB23ADE86A009DA8C7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44EE0F45F3859315982761C5 /* Pods-GraceChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraceChatApp.release.xcconfig"; path = "Target Support Files/Pods-GraceChatApp/Pods-GraceChatApp.release.xcconfig"; sourceTree = "<group>"; };
+		54D0DE3FE83AF4844134AD83 /* Pods-GraceChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraceChatApp.debug.xcconfig"; path = "Target Support Files/Pods-GraceChatApp/Pods-GraceChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6585FEE423ADE7CC009DA8C7 /* GraceChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraceChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6585FEE723ADE7CC009DA8C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6585FEE923ADE7CC009DA8C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		6585FEF023ADE7CE009DA8C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6585FEF323ADE7CE009DA8C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6585FEF523ADE7CE009DA8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6585FEFB23ADE86A009DA8C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F4E7732D5724B3EB0722C1E /* Pods_GraceChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraceChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134FC690294ADD1FFD952E2E /* Pods_GraceChatApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		312D31FDB56FE09BB4A2DF38 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54D0DE3FE83AF4844134AD83 /* Pods-GraceChatApp.debug.xcconfig */,
+				44EE0F45F3859315982761C5 /* Pods-GraceChatApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		44D9337E8D1C40AFCD23B07A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F4E7732D5724B3EB0722C1E /* Pods_GraceChatApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6585FEDB23ADE7CC009DA8C7 = {
 			isa = PBXGroup;
 			children = (
 				6585FEE623ADE7CC009DA8C7 /* GraceChatApp */,
 				6585FEE523ADE7CC009DA8C7 /* Products */,
+				312D31FDB56FE09BB4A2DF38 /* Pods */,
+				44D9337E8D1C40AFCD23B07A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +83,7 @@
 		6585FEE623ADE7CC009DA8C7 /* GraceChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				6585FEFB23ADE86A009DA8C7 /* GoogleService-Info.plist */,
 				6585FEE723ADE7CC009DA8C7 /* AppDelegate.swift */,
 				6585FEE923ADE7CC009DA8C7 /* SceneDelegate.swift */,
 				6585FEEB23ADE7CC009DA8C7 /* ViewController.swift */,
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6585FEF823ADE7CE009DA8C7 /* Build configuration list for PBXNativeTarget "GraceChatApp" */;
 			buildPhases = (
+				C814EE8B433DCF44778C1F46 /* [CP] Check Pods Manifest.lock */,
 				6585FEE023ADE7CC009DA8C7 /* Sources */,
 				6585FEE123ADE7CC009DA8C7 /* Frameworks */,
 				6585FEE223ADE7CC009DA8C7 /* Resources */,
+				B628229889646A65379F79B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				6585FEF423ADE7CE009DA8C7 /* LaunchScreen.storyboard in Resources */,
+				6585FEFC23ADE86A009DA8C7 /* GoogleService-Info.plist in Resources */,
 				6585FEF123ADE7CE009DA8C7 /* Assets.xcassets in Resources */,
 				6585FEEF23ADE7CC009DA8C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B628229889646A65379F79B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GraceChatApp/Pods-GraceChatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GraceChatApp/Pods-GraceChatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GraceChatApp/Pods-GraceChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C814EE8B433DCF44778C1F46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GraceChatApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6585FEE023ADE7CC009DA8C7 /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		6585FEF923ADE7CE009DA8C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54D0DE3FE83AF4844134AD83 /* Pods-GraceChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +374,7 @@
 		};
 		6585FEFA23ADE7CE009DA8C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44EE0F45F3859315982761C5 /* Pods-GraceChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
