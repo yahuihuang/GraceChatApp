@@ -10,13 +10,31 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        
+        //指定推播的代理人
+        Messaging.messaging().delegate = self
+
+        //要求三種型式的推播 UNUserNotificationCenter.current().delegate = self
+        let authOptions:UNAuthorizationOptions = [.alert, .sound, .badge]
+        UNUserNotificationCenter.current().requestAuthorization(options:
+                authOptions) { (_, _) in}
+        application.registerForRemoteNotifications()
+        
         return true
+    }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("Get tocken:\(fcmToken)s")
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("User Info:\(userInfo)")
     }
 
     // MARK: UISceneSession Lifecycle
